@@ -1,0 +1,281 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+h1.title,
+.footer-copyright a {
+  font-family: 'Architects Daughter', cursive;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/* start welcome animation */
+
+body.welcome {
+  background: #512da8;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.welcome .splash {
+  height: 0px;
+  padding: 0px;
+  border: 130em solid #039be5;
+  position: fixed;
+  left: 50%;
+  top: 100%;
+  display: block;
+  box-sizing: initial;
+  overflow: hidden;
+
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
+          animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
+}
+
+.welcome #welcome {
+  background: #311b92 ;
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  -webkit-animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards, hide 2s 2.9s ease forwards;
+          animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards, hide 2s 2.9s ease forwards;
+}
+
+.content{
+  opacity: 0;
+  position: absolute !important;
+  -webkit-animation: moveInput 2s 3.1s ease forwards;
+          animation: moveInput 2s 3.1s ease forwards;
+}
+
+/* moveIn */
+.welcome header,
+.welcome .btn .input {
+  opacity: 0;
+  -webkit-animation: moveIn 2s 3.1s ease forwards;
+          animation: moveIn 2s 3.1s ease forwards;
+}
+
+@-webkit-keyframes init {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 56px;
+    height: 56px;
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes init {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 56px;
+    height: 56px;
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes puff {
+  0% {
+    top: 100%;
+    height: 0px;
+    padding: 0px;
+  }
+  100% {
+    top: 50%;
+    height: 100%;
+    padding: 0px 100%;
+  }
+}
+
+@keyframes puff {
+  0% {
+    top: 100%;
+    height: 0px;
+    padding: 0px;
+  }
+  100% {
+    top: 50%;
+    height: 100%;
+    padding: 0px 100%;
+  }
+}
+
+@-webkit-keyframes borderRadius {
+  0% {
+    border-radius: 50%;
+  }
+  100% {
+    border-radius: 0px;
+  }
+}
+
+@keyframes borderRadius {
+  0% {
+    border-radius: 50%;
+  }
+  100% {
+    border-radius: 0px;
+  }
+}
+
+@-webkit-keyframes moveDown {
+  0% {
+    top: 50%;
+  }
+  50% {
+    top: 40%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    top: 50%;
+  }
+  50% {
+    top: 40%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@-webkit-keyframes moveUp {
+  0% {
+    background: #311b92;
+    top: 100%;
+  }
+  50% {
+    top: 40%;
+  }
+  100% {
+    top: 50%;
+    background: #039be5;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    background: #311b92;
+    top: 100%;
+  }
+  50% {
+    top: 40%;
+  }
+  100% {
+    top: 50%;
+    background: #039be5;
+  }
+}
+
+@-webkit-keyframes materia {
+  0% {
+    background: #039be5;
+  }
+  50% {
+    background: #039be5;
+    top: 26px;
+  }
+  100% {
+    background: #311b92;
+    width: 100%;
+    height: 64px;
+    border-radius: 0px;
+    top: 26px;
+  }
+}
+
+@keyframes materia {
+  0% {
+    background: #039be5;
+  }
+  50% {
+    background: #039be5;
+    top: 26px;
+  }
+  100% {
+    background: #311b92;
+    width: 100%;
+    height: 64px;
+    border-radius: 0px;
+    top: 26px;
+  }
+}
+
+@-webkit-keyframes moveIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes moveInput {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes moveInput {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
