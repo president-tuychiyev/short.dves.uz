@@ -15,3 +15,11 @@ Shorten, create and share trusted, powerful links for your business. short.dves.
 - [Create mysql db](https://www.w3schools.com/php/php_mysql_create_table.asp)
 - [Import db.sql](https://github.com/president-tuychiyev/short.dves.uz/blob/master/db.sql)
 - [Adjust the Mysql settings](https://github.com/president-tuychiyev/short.dves.uz/blob/master/app/config/database.php)
+
+# Write yourself 😁
+
+You need to write the `web.php` file at `app/routes/`, write code based on <b>PHP OOP</b> and start the project.
+ 
+ # Comment
+ 
+ This project is running in test mode in the subdomain [short.dves.uz](http://short.dves.uz)
